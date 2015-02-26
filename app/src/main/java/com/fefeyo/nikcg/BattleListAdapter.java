@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.fefeyo.nikcg.data.Item;
 
@@ -32,6 +33,11 @@ public class BattleListAdapter extends ArrayAdapter<Item> {
         right.setImageBitmap(item.getRightGavament());
         ImageView left = (ImageView)convertView.findViewById(R.id.leftGavament);
         left.setImageBitmap(item.getLeftGavament());
+        TextView rightName = (TextView)convertView.findViewById(R.id.rightName);
+        rightName.setText(item.getRightName());
+        TextView leftName = (TextView)convertView.findViewById(R.id.leftName);
+        leftName.setText(item.getLeftName());
+
         return convertView;
     }
 }

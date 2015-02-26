@@ -7,7 +7,9 @@ import android.graphics.Bitmap;
  */
 public class Item {
     private Bitmap rightGavament;
+    private String rightName;
     private Bitmap leftGavament;
+    private String leftName;
     Item(){
         rightGavament = null;
         leftGavament = null;
@@ -26,5 +28,21 @@ public class Item {
 
     public void setLeftGavament(Bitmap b){
         this.leftGavament = b;
+    }
+
+    public String getRightName(){
+        return rightName;
+    }
+
+    public void setRightName(String name){
+        this.rightName = name;
+    }
+
+    public String getLeftName(){
+        return leftName;
+    }
+
+    public void setLeftName(String name){
+        this.leftName = name;
     }
 }
