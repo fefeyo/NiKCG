@@ -1,4 +1,4 @@
-package com.fefeyo.nikcg;
+package com.fefeyo.nikcg.data;
 
 import android.graphics.Bitmap;
 
