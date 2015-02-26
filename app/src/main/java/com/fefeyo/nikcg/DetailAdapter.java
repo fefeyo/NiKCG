@@ -19,8 +19,8 @@ public class DetailAdapter extends ArrayAdapter<DetailListItem> {
     private LayoutInflater inflater;
     private int count;
 
-    public DetailAdapter(Context context, int resource,ArrayList<DetailListItem> item) {
-        super(context, resource,item);
+    public DetailAdapter(Context context, int resource,ArrayList<DetailListItem> right,ArrayList<DetailListItem> left) {
+        super(context, resource,right);
         count = 0;
         this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -30,7 +30,7 @@ public class DetailAdapter extends ArrayAdapter<DetailListItem> {
         if(convertView == null){
             if(count % 2 == 0){
                 convertView = inflater.inflate(R.layout.battledetail_right,null);
-                DetailListItem item = (DetailListItem)getItem(position);
+                DetailListItem item = getItem(position);
                 ImageView image = (ImageView)convertView.findViewById(R.id.rightFace);
                 image.setImageBitmap(item.getBitmap());
                 TextView text = (TextView)convertView.findViewById(R.id.rightSpeak);
@@ -38,7 +38,7 @@ public class DetailAdapter extends ArrayAdapter<DetailListItem> {
                 count++;
             }else{
                 convertView = inflater.inflate(R.layout.battledetail_left,null);
-                DetailListItem item = (DetailListItem)getItem(position);
+                DetailListItem item = getItem(position);
                 ImageView image = (ImageView)convertView.findViewById(R.id.leftFace);
                 image.setImageBitmap(item.getBitmap());
                 TextView text = (TextView)convertView.findViewById(R.id.leftSpeak);

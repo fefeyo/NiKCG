@@ -9,7 +9,7 @@ public class DetailListItem {
     private Bitmap bitmap;
     private String speak;
 
-    DetailListItem(){
+    public DetailListItem(){
         bitmap = null;
         speak = null;
     }
