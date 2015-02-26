@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
 
-import com.fefeyo.nikcg.data.Item;
+import com.fefeyo.nikcg.data.BattleListItem;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends ActionBarActivity {
     private ListView list;
     private BattleListAdapter adapter;
-    private ArrayList<Item> arr;
+    private ArrayList<BattleListItem> arr;
 
 
     @Override
