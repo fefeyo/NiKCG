@@ -1,7 +1,21 @@
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:text="未定"
-    android:textSize="30sp" />
+<LinearLayout
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:id="@+id/Linear"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="99dp"
+        android:id="@+id/Linear1">
+
+        </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:id="@+id/listView" />
+</LinearLayout>

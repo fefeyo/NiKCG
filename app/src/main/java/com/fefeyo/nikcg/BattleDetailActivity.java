@@ -11,5 +11,7 @@ public class BattleDetailActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
 
+
+
     }
 }

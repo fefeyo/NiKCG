@@ -15,5 +15,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         list = (ListView) findViewById(R.id.battleList);
 
+
     }
 }
