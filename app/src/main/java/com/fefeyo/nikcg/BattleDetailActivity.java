@@ -5,7 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SeekBar;
+import android.widget.ProgressBar;
 
 import com.fefeyo.nikcg.data.DetailListItem;
 
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class BattleDetailActivity extends ActionBarActivity {
    private ImageView leftFace;
    private ImageView rightFace;
-   private SeekBar battleBar;
+   private ProgressBar battleBar;
    private ListView listView;
    private DetailAdapter detailAdapter;
    private ArrayList<DetailListItem> item;
@@ -30,7 +30,7 @@ public class BattleDetailActivity extends ActionBarActivity {
 
        leftFace = (ImageView)findViewById(R.id.leftFace);
        rightFace = (ImageView)findViewById(R.id.rightFace);
-        battleBar = (SeekBar)findViewById(R.id.battleBar);
+        battleBar = (ProgressBar)findViewById(R.id.Bar);
         listView = (ListView)findViewById(R.id.listView);
 
         detailAdapter =new DetailAdapter(this,
@@ -50,9 +50,9 @@ public class BattleDetailActivity extends ActionBarActivity {
                 if(firstVisibleItem + visibleItemCount == totalItemCount) {
                     //勝敗処理
                 }else {
-                    //ターンが終わった場合
-                    if ((firstVisibleItem + visibleItemCount - 1) % 2 == 0) {
 
+                    if ((firstVisibleItem + visibleItemCount - 1) % 2 == 0) {
+                        //ターンが終わった場合
 
                     }
                 }
