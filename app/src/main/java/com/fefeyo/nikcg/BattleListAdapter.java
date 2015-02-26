@@ -29,7 +29,7 @@ public class BattleListAdapter extends ArrayAdapter<BattleListItem> {
         if(convertView == null){
             convertView = inflater.inflate(R.layout.item_row,null);
         }
-        BattleListItem item = (BattleListItem)getItem(position);
+        BattleListItem item = getItem(position);
         ImageView right = (ImageView)convertView.findViewById(R.id.rightGavament);
         right.setImageBitmap(item.getRightGavament());
         ImageView left = (ImageView)convertView.findViewById(R.id.leftGavament);

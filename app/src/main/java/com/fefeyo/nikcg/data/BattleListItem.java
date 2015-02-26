@@ -10,7 +10,7 @@ public class BattleListItem {
     private String rightName;
     private Bitmap leftGavament;
     private String leftName;
-    BattleListItem(){
+    public BattleListItem(){
         rightGavament = null;
         leftGavament = null;
     }

@@ -21,8 +21,6 @@ public class BattleDetailActivity extends ActionBarActivity {
    private ArrayList<DetailListItem> item;
    private int position;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
