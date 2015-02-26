@@ -31,11 +31,11 @@ public class BattleDetailActivity extends ActionBarActivity {
 
        leftFace = (ImageView)findViewById(R.id.leftFace);
        rightFace = (ImageView)findViewById(R.id.rightFace);
-        battleBar = (ProgressBar)findViewById(R.id.ProgressBar);
+        battleBar = (ProgressBar)findViewById(R.id.ProBar);
         listView = (ListView)findViewById(R.id.listView);
-
+        progress = 50;
         battleBar.setMax(MAX);
-        battleBar.setProgress(50);
+        battleBar.setProgress(progress);
 
         detailAdapter =new DetailAdapter(this,
                     0,
@@ -56,10 +56,10 @@ public class BattleDetailActivity extends ActionBarActivity {
                 if(firstVisibleItem + visibleItemCount == totalItemCount) {
                     //勝敗処理
                     if(battleBar.getProgress() < 50){
-                        //左側が買った場合
+                        //左側が勝った場合
 
                     }else if(battleBar.getProgress() > 50){
-                       //右側が買った場合
+                       //右側が勝った場合
                     }else {
                         //引き分けの場合
                     }
@@ -67,6 +67,8 @@ public class BattleDetailActivity extends ActionBarActivity {
 
                     if ((firstVisibleItem + visibleItemCount - 1) % 2 == 0) {
                         //ターンが終わった場合
+
+                        battleBar.setProgress(progress);
 
                     }
                 }
