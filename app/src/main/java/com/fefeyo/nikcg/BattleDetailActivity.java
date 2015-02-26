@@ -34,7 +34,7 @@ public class BattleDetailActivity extends ActionBarActivity {
         battleBar = (ProgressBar)findViewById(R.id.ProgressBar);
         listView = (ListView)findViewById(R.id.listView);
 
-        battleBar.setMax(100);
+        battleBar.setMax();
         battleBar.setProgress(50);
 
         detailAdapter =new DetailAdapter(this,
