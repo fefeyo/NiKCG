@@ -5,12 +5,12 @@ import android.graphics.Bitmap;
 /**
  * Created by FEFE on 2015/02/26.
  */
-public class Item {
+public class BattleListItem {
     private Bitmap rightGavament;
     private String rightName;
     private Bitmap leftGavament;
     private String leftName;
-    Item(){
+    BattleListItem(){
         rightGavament = null;
         leftGavament = null;
     }

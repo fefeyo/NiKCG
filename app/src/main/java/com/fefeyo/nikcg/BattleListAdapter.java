@@ -8,17 +8,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fefeyo.nikcg.data.Item;
+import com.fefeyo.nikcg.data.BattleListItem;
 
 import java.util.ArrayList;
 
 /**
  * Created by FEFE on 2015/02/26.
  */
-public class BattleListAdapter extends ArrayAdapter<Item> {
+public class BattleListAdapter extends ArrayAdapter<BattleListItem> {
     private LayoutInflater inflater;
+    private int count = 0;
 
-    public BattleListAdapter(Context context, int resource,ArrayList<Item> item) {
+    public BattleListAdapter(Context context, int resource,ArrayList<BattleListItem> item) {
         super(context, resource,item);
         this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -26,9 +27,9 @@ public class BattleListAdapter extends ArrayAdapter<Item> {
     @Override
     public View getView(int position,View convertView,ViewGroup parent){
         if(convertView == null){
-            convertView = inflater.inflate(R.layout.activity_main,null);
+            convertView = inflater.inflate(R.layout.item_row,null);
         }
-        Item item = (Item)getItem(position);
+        BattleListItem item = (BattleListItem)getItem(position);
         ImageView right = (ImageView)convertView.findViewById(R.id.rightGavament);
         right.setImageBitmap(item.getRightGavament());
         ImageView left = (ImageView)convertView.findViewById(R.id.leftGavament);
