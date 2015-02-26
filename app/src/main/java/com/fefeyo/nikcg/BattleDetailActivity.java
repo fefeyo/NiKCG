@@ -6,6 +6,7 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.fefeyo.nikcg.data.DetailListItem;
 
@@ -18,6 +19,8 @@ public class BattleDetailActivity extends ActionBarActivity {
    private ProgressBar battleBar;
    private ListView listView;
    private DetailAdapter detailAdapter;
+   private TextView leftDamage;
+    private TextView rightDamage;
    private ArrayList<DetailListItem> rightItem;
     private ArrayList<DetailListItem> leftItem;
    private int position;
@@ -33,6 +36,8 @@ public class BattleDetailActivity extends ActionBarActivity {
        rightFace = (ImageView)findViewById(R.id.rightFace);
         battleBar = (ProgressBar)findViewById(R.id.ProBar);
         listView = (ListView)findViewById(R.id.listView);
+        leftDamage = (TextView)findViewById(R.id.leftDamage);
+        rightDamage = (TextView)findViewById(R.id.rightDamage);
         progress = 50;
         battleBar.setMax(MAX);
         battleBar.setProgress(progress);
