@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     android:padding="6dp">
     <ImageView
+        android:id="@+id/rightGavament"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
@@ -17,6 +18,7 @@
         android:textSize="20sp"
         />
     <ImageView
+        android:id="@+id/leftGavament"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
