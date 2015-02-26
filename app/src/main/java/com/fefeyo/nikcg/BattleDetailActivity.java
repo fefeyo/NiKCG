@@ -18,8 +18,11 @@ public class BattleDetailActivity extends ActionBarActivity {
    private ProgressBar battleBar;
    private ListView listView;
    private DetailAdapter detailAdapter;
-   private ArrayList<DetailListItem> item;
+   private ArrayList<DetailListItem> rightItem;
+    private ArrayList<DetailListItem> leftItem;
    private int position;
+    private final int MAX = 100;
+    private int progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +31,17 @@ public class BattleDetailActivity extends ActionBarActivity {
 
        leftFace = (ImageView)findViewById(R.id.leftFace);
        rightFace = (ImageView)findViewById(R.id.rightFace);
-        battleBar = (ProgressBar)findViewById(R.id.Bar);
+        battleBar = (ProgressBar)findViewById(R.id.ProgressBar);
         listView = (ListView)findViewById(R.id.listView);
+
+        battleBar.setMax(100);
+        battleBar.setProgress(50);
 
         detailAdapter =new DetailAdapter(this,
                     0,
-                   item );
+                   rightItem,
+                   leftItem
+                );
         listView.setAdapter(detailAdapter);
 
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
@@ -47,6 +55,14 @@ public class BattleDetailActivity extends ActionBarActivity {
                   position = listView.getChildAt(0).getTop();
                 if(firstVisibleItem + visibleItemCount == totalItemCount) {
                     //勝敗処理
+                    if(battleBar.getProgress() < 50){
+                        //左側が買った場合
+
+                    }else if(battleBar.getProgress() > 50){
+                       //右側が買った場合
+                    }else {
+                        //引き分けの場合
+                    }
                 }else {
 
                     if ((firstVisibleItem + visibleItemCount - 1) % 2 == 0) {
@@ -57,6 +73,8 @@ public class BattleDetailActivity extends ActionBarActivity {
 
             }
         });
+
+
 
 
 
