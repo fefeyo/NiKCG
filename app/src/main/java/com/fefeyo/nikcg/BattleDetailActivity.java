@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 
 public class BattleDetailActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+    private final int MAX = 100;
    private ImageView leftFace;
    private ImageView rightFace;
    private ProgressBar battleBar;
@@ -27,23 +28,22 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
    private ArrayList<DetailListItem> rightItem;
     private ArrayList<DetailListItem> leftItem;
    private int position;
-    private final int MAX = 100;
     private int progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
-
-       leftFace = (ImageView)findViewById(R.id.leftFace);
-       rightFace = (ImageView)findViewById(R.id.rightFace);
-        battleBar = (ProgressBar)findViewById(R.id.ProBar);
-        listView = (ListView)findViewById(R.id.listView);
-        leftDamage = (TextView)findViewById(R.id.leftDamage);
-        rightDamage = (TextView)findViewById(R.id.rightDamage);
-        progress = 50;
-        battleBar.setMax(MAX);
-        battleBar.setProgress(progress);
+//
+//       leftFace = (ImageView)findViewById(R.id.leftFace);
+//       rightFace = (ImageView)findViewById(R.id.rightFace);
+//        battleBar = (ProgressBar)findViewById(R.id.ProBar);
+//        listView = (ListView)findViewById(R.id.listView);
+//        leftDamage = (TextView)findViewById(R.id.leftDamage);
+//        rightDamage = (TextView)findViewById(R.id.rightDamage);
+//        progress = 50;
+//        battleBar.setMax(MAX);
+//        battleBar.setProgress(progress);
 
 
         detailAdapter =new DetailAdapter(this,
