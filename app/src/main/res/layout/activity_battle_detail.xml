@@ -1,57 +1,70 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/tool_bar"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:minHeight="?attr/actionBarSize"
-        android:background="?attr/colorPrimary">
 
-        <!-- ためしにスピナーを追加 -->
-        <ProgressBar
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="政治と金\n与党　VS　野党"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="西川公也農林水産相の献金問題は２３日、第２次安倍政権発足以降３人目となる閣僚辞任に発展した。"/>
+        <include
+            android:id="@+id/oneTurn"
+            layout="@layout/turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="下村博文氏の講演会が政治団体の届出をしないまま、下村氏の講演会やパーティーを定期的に開いていることが週間文春の取材でわかった事から、地方の支援団体「博友会」から寄付を受けているのではないかという疑惑が浮かび上がった。"/>
+        <include
+            android:id="@+id/tweTurn"
+            layout="@layout/turn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:progressDrawable="@drawable/progresspic"
+ />
 
-            android:id="@+id/Progress" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="野党は２５日の衆議院予算委員会で、上記２件の閣僚の「政治とカネ」の問題で攻勢をかけ続け、安倍政権に打撃を与える考えだ。" />
+        <include
+            android:id="@+id/threeTurn"
+            layout="@layout/turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+ />
 
-    </android.support.v7.widget.Toolbar>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:orientation="vertical">
-    <include
-        layout="@layout/turn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <include
-        layout="@layout/turn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp" />
-    <include
-        layout="@layout/turn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp" />
-    <com.beardedhen.androidbootstrap.BootstrapButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:text="この討論について\nもっと詳しく知りたい方はこちら"
-        app:bb_icon_left="fa-info-circle"
-        app:bb_roundedCorners="true"
-        app:bb_type="info" />
-    <View
-        android:layout_width="0dp"
-        android:layout_height="50dp"/>
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/infomation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:text="この討論について\nもっと詳しく知りたい方はこちら"
+            app:bb_icon_left="fa-info-circle"
+            app:bb_roundedCorners="true"
+            app:bb_type="info" />
 
-</LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
 
 </ScrollView>
