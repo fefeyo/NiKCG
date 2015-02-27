@@ -17,7 +17,7 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:progressDrawable="@drawable/progresspic"
 
-            android:id="@+id/spinner" />
+            android:id="@+id/Progress" />
 
     </android.support.v7.widget.Toolbar>
 <LinearLayout
