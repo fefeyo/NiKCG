@@ -30,10 +30,10 @@ public class BattleListAdapter extends ArrayAdapter<BattleListItem> {
             convertView = inflater.inflate(R.layout.item_row,null);
         }
         BattleListItem item = getItem(position);
-        ImageView right = (ImageView)convertView.findViewById(R.id.rightGavament);
-        right.setImageBitmap(item.getRightGavament());
-        ImageView left = (ImageView)convertView.findViewById(R.id.leftGavament);
-        left.setImageBitmap(item.getLeftGavament());
+        ImageView rightImage = (ImageView)convertView.findViewById(R.id.rightGavament);
+        rightImage.setImageBitmap(item.getRightGavament());
+        ImageView leftImage = (ImageView)convertView.findViewById(R.id.leftGavament);
+        leftImage.setImageBitmap(item.getLeftGavament());
         TextView rightName = (TextView)convertView.findViewById(R.id.rightName);
         rightName.setText(item.getRightName());
         TextView leftName = (TextView)convertView.findViewById(R.id.leftName);
