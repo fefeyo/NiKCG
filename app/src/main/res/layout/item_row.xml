@@ -15,19 +15,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="dummy"/>
+            android:text="dummy"
+            android:textSize="15sp"/>
 
         <ImageView
             android:id="@+id/rightGavament"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="100dp"/>
     </LinearLayout>
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:gravity="center"
         android:padding="30dp"
         android:src="@drawable/sword"/>
 
@@ -42,12 +43,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="dummy"/>
+            android:text="dummy"
+            android:textSize="15sp"/>
 
         <ImageView
             android:id="@+id/leftGavament"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="100dp"/>
 
     </LinearLayout>
 

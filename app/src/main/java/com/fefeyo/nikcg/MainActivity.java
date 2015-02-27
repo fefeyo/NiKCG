@@ -31,14 +31,14 @@ public class MainActivity extends ActionBarActivity {
         ac.setCustomView(R.layout.bar);
         list = (ListView) findViewById(R.id.battleList);
         arr = new ArrayList<>();
-        item = new BattleListItem();
 
         //　テスト用開始
-        String[] a = new String[]{"red","red","red","red","red"};
-        String[] b = new String[]{"blue","blue","blue","blue","blue"};
-        int[] c = new int[]{R.drawable.red,R.drawable.red,R.drawable.red,R.drawable.red,R.drawable.red};
-        int[] d = new int[]{R.drawable.blue,R.drawable.blue,R.drawable.blue,R.drawable.blue,R.drawable.blue};
-        for(int i = 0;i < 5;i++){
+        String[] a = new String[]{"【自民】\n阿部首相","【自民】\n稲田朋美","【自民】\n谷垣禎一","【自民】\n稲田朋美"};
+        String[] b = new String[]{"【民主】\n野党","【共産】\n小池晃","【民主】\n枝野幸男","【維新】\n柿崎未途"};
+        int[] c = new int[]{R.drawable.abe,R.drawable.inada,R.drawable.tani,R.drawable.inada2};
+        int[] d = new int[]{R.drawable.yato,R.drawable.koike,R.drawable.edano,R.drawable.kakizaki};
+        for(int i = 0;i < a.length;i++){
+            item = new BattleListItem();
             item.setRightGavament(BitmapFactory.decodeResource(getResources(),c[i]));
             item.setRightName(a[i]);
             item.setLeftGavament(BitmapFactory.decodeResource(getResources(),d[i]));
