@@ -18,6 +18,7 @@ public class BattleDetailActivity extends ActionBarActivity {
    private ImageView rightFace;
    private ProgressBar battleBar;
    private ListView listView;
+    private int scrollFrag;
    private DetailAdapter detailAdapter;
    private TextView leftDamage;
     private TextView rightDamage;
@@ -49,6 +50,8 @@ public class BattleDetailActivity extends ActionBarActivity {
                 );
         listView.setAdapter(detailAdapter);
 
+        scrollFrag = 2;
+
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -72,8 +75,13 @@ public class BattleDetailActivity extends ActionBarActivity {
 
                     if ((firstVisibleItem + visibleItemCount - 1) % 2 == 0) {
                         //ターンが終わった場合
+                        if(firstVisibleItem + visibleItemCount / 2 < scrollFrag){
 
-                        battleBar.setProgress(progress);
+                        }else {
+
+                            battleBar.setProgress(progress);
+                            scrollFrag++;
+                        }
 
                     }
                 }
@@ -81,16 +89,6 @@ public class BattleDetailActivity extends ActionBarActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
     }
+
 }
