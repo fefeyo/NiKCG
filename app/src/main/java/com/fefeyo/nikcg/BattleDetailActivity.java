@@ -2,7 +2,9 @@ package com.fefeyo.nikcg;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -13,7 +15,7 @@ import com.fefeyo.nikcg.data.DetailListItem;
 import java.util.ArrayList;
 
 
-public class BattleDetailActivity extends ActionBarActivity {
+public class BattleDetailActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
    private ImageView leftFace;
    private ImageView rightFace;
    private ProgressBar battleBar;
@@ -43,12 +45,14 @@ public class BattleDetailActivity extends ActionBarActivity {
         battleBar.setMax(MAX);
         battleBar.setProgress(progress);
 
+
         detailAdapter =new DetailAdapter(this,
                     0,
                    rightItem,
                    leftItem
                 );
         listView.setAdapter(detailAdapter);
+        listView.setOnItemClickListener(this);
 
         scrollFrag = 2;
 
@@ -71,19 +75,6 @@ public class BattleDetailActivity extends ActionBarActivity {
                     }else {
                         //引き分けの場合
                     }
-                }else {
-
-                    if ((firstVisibleItem + visibleItemCount - 1) % 2 == 0) {
-                        //ターンが終わった場合
-                        if(firstVisibleItem + visibleItemCount / 2 < scrollFrag){
-
-                        }else {
-
-                            battleBar.setProgress(progress);
-                            scrollFrag++;
-                        }
-
-                    }
                 }
 
             }
@@ -91,4 +82,18 @@ public class BattleDetailActivity extends ActionBarActivity {
 
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        switch(view.getId()){
+            case R.id.rightApprove :
+                progress -= 10;
+                battleBar.setProgress(progress);
+
+                break;
+            case R.id.leftApprove :
+                progress += 10;
+                battleBar.setProgress(progress);
+                break;
+        }
+    }
 }
