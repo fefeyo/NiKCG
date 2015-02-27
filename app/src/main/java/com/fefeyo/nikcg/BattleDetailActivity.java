@@ -16,6 +16,7 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
    private ImageView leftFace;
    private ImageView rightFace;
    private ProgressBar battleBar;
+   private int Flag;
    private ListView listView;
     private int scrollFrag;
 
@@ -29,6 +30,7 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
+        Flag = 0;
 
       battleBar = (ProgressBar)findViewById(R.id.Progress);
         Toolbar toolbar = (Toolbar)findViewById(R.id.tool_bar);
@@ -40,16 +42,33 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        switch(view.getId()){
-            case R.id.rightApprove :
+        switch (view.getId()) {
+            case R.id.rightApprove:
                 progress -= 10;
                 battleBar.setProgress(progress);
+                Flag += 1;
+                if (Flag > 3){
+                    Judge(progress);
+                }
 
                 break;
-            case R.id.leftApprove :
+            case R.id.leftApprove:
                 progress += 10;
                 battleBar.setProgress(progress);
+                Flag += 1;
+                if (Flag > 3){
+                    Judge(progress);
+                }
                 break;
+        }
+    }
+    private void Judge(int progress){
+        if(progress < 50){
+            //右側が勝った場合
+        }else if(progress > 50){
+           // 左側が勝った場合
+        }else {
+        //引き分けだった場合
         }
     }
 }
