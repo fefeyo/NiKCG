@@ -33,6 +33,7 @@
         android:layout_weight="3"
         android:gravity="start|center_vertical"
         android:paddingLeft="40dp"
-        android:text="発言発言発言発言発言発言発言発言発言発言発言発言" />
+        android:text="発言発言発言発言発言発言発言発言発言発言発言発言"
+        android:textColor="#000000" />
     </LinearLayout>
 </FrameLayout>

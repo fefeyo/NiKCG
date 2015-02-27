@@ -80,7 +80,7 @@ public class BattleDetailActivity extends ActionBarActivity {
         yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.simo));
         t5.setText("安倍首相自ら政治とカネに対処する姿勢を示せなければ、首相を辞職する覚悟と決意を持つべきだ");
         yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.mabuti));
-        t6.setText("このような結果を私が招いた事について、国民の皆様に大変申し訳ない。この問題については要望があれば果たしていくつもりだ");
+        t6.setText("このような結果を招いた事について、国民の皆様に大変申し訳ない。この問題については要望があれば果たしていくつもりだ");
         yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.abe));
 
         siki = (ProgressBar) findViewById(R.id.siki);

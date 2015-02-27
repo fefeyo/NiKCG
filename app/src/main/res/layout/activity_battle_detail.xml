@@ -16,12 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="政治と金\n与党　VS　野党"
+            android:text="政治とカネ\n与党　VS　野党"
+            android:textColor="#000000"
             android:textSize="30sp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="西川公也農林水産相の献金問題は２３日、第２次安倍政権発足以降３人目となる閣僚辞任に発展した。"/>
+            android:text="西川公也農林水産相の献金問題は２３日、第２次安倍政権発足以降３人目となる閣僚辞任に発展した。"
+
+            android:textColor="#000000"/>
         <include
             android:id="@+id/oneTurn"
             layout="@layout/turn"
@@ -32,7 +35,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:text="下村博文氏の講演会が政治団体の届出をしないまま、下村氏の講演会やパーティーを定期的に開いていることが週間文春の取材でわかった事から、地方の支援団体「博友会」から寄付を受けているのではないかという疑惑が浮かび上がった。"/>
+            android:text="下村博文氏の講演会が政治団体の届出をしないまま、下村氏の講演会やパーティーを定期的に開いていることが週間文春の取材でわかった事から、地方の支援団体「博友会」から寄付を受けているのではないかという疑惑が浮かび上がった。"
+
+            android:textColor="#000000"/>
         <include
             android:id="@+id/tweTurn"
             layout="@layout/turn"
@@ -44,7 +49,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:text="野党は２５日の衆議院予算委員会で、上記２件の閣僚の「政治とカネ」の問題で攻勢をかけ続け、安倍政権に打撃を与える考えだ。" />
+
+            android:text="野党は２５日の衆議院予算委員会で、上記２件の閣僚の「政治とカネ」の問題で攻勢をかけ続け、安倍政権に打撃を与える考えだ。"
+            android:textColor="#000000" />
         <include
             android:id="@+id/threeTurn"
             layout="@layout/turn"
