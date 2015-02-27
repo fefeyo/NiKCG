@@ -51,9 +51,9 @@
             android:id="@+id/leftApprove"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="野党側に賛成！"
+            android:text="野党に賛成！"
             app:bb_icon_left="fa-child"
             app:bb_roundedCorners="true"
             app:bb_type="success" />
@@ -61,9 +61,9 @@
             android:id="@+id/rightApprove"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="与党側に賛成！"
+            android:text="与党に賛成！"
             app:bb_icon_left="fa-child"
             app:bb_roundedCorners="true"
             app:bb_type="warning" />

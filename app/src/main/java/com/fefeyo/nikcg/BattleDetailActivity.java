@@ -2,10 +2,13 @@ package com.fefeyo.nikcg;
 
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -19,13 +22,17 @@ public class BattleDetailActivity extends ActionBarActivity{
     private TextView t1, t2, t3, t4, t5, t6;
     private BootstrapButton t1R, t1L, t2R, t2L, t3R, t3L;
     private ImageView yato1,yato2,yato3,yoto1,yoto2,yoto3;
+    private ProgressBar siki;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
-
+        ActionBar ac = getSupportActionBar();
+        ac.setDisplayShowTitleEnabled(false);
+        ac.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        ac.setCustomView(R.layout.sikibar);
 
 
         mainContainer = (ScrollView) findViewById(R.id.mainContainer);
@@ -57,21 +64,71 @@ public class BattleDetailActivity extends ActionBarActivity{
         f6 = (FrameLayout)turnThree.findViewById(R.id.speakLeft);
         t6 = (TextView)f6.findViewById(R.id.talkLeft);
 
-        t1.setText("西川氏は全く反省がみられない。引き続き説明責任を求める。またこれ等の問題は首相の任命責任である。西川氏の説明責任にけじめをつけるのが大事だ");
-        yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.yato));
+        t1.setText("この問題は首相の任命責任である。西川氏の説明責任にけじめをつけるのが大事だ");
+        yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kouda));
         t2.setText("様々な要求があれば、議員として資料を出すなりの対応をとっていくことは当然だ");
+        yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.abe));
+        t3.setText("会員制のパーティーする場合、規約に下村大臣の活動支援と届け出るべきではないか");
+        yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kashiwagi));
+        t4.setText("地方博友会は、各地域の有志の皆さんで運営をして頂いており、私の事務所は関与しておりません。");
+        yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.simo));
+        t5.setText("安倍首相自ら政治とカネに対処する姿勢を示せなければ、首相を辞職する覚悟と決意を持つべきだ");
+        yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.mabuti));
+        t6.setText("このような結果を私が招いた事について、国民の皆様に大変申し訳ない。この問題については要望があれば果たしていくつもりだ");
         yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.abe));
-        t3.setText("人を集めて、会員制のパーティーする場合、政治団体として本来、規約に下村大臣の活動を支援すると届け出るべきではありませんか");
-        yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.yato));
-        t4.setText("地方の博友会から寄付を受けたり、パーティー券を購入してもらうことはありません。地方博友会は、各地域の有志の皆さんで運営をして頂いておりまして、私の事務所は一切タッチしておりません。");
-        yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.yato));
-        t5.setText("憲政史上最悪の金まみれの内閣という汚名を残すことになる。また、安倍首相自ら政治とカネに対処する姿勢を示せなければ、首相を辞職する覚悟と決意を持つべきだ");
-        yato1.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.yato));
-        t6.setText("私が任命した閣僚が交代する結果を招いたことについて、国民の皆様に大変申し訳ない。政治とカネの問題については要望があれば果たしていくのは当然だ");
-        yoto1.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.abe));
 
+        siki = (ProgressBar)findViewById(R.id.siki);
+        siki.setMax(100);
+        siki.setProgress(50);
 
-
+        t1R.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                siki.setProgress(siki.getProgress()-15);
+                t1R.setEnabled(false);
+                t1L.setEnabled(false);
+            }
+        });
+        t1L.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                siki.setProgress(siki.getProgress()+15);
+                t1R.setEnabled(false);
+                t1L.setEnabled(false);
+            }
+        });
+        t2R.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                siki.setProgress(siki.getProgress()-20);
+                t2R.setEnabled(false);
+                t2L.setEnabled(false);
+            }
+        });
+        t2L.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                siki.setProgress(siki.getProgress()+20);
+                t2R.setEnabled(false);
+                t2L.setEnabled(false);
+            }
+        });
+        t3R.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                siki.setProgress(siki.getProgress()-25);
+                t3R.setEnabled(false);
+                t3L.setEnabled(false);
+            }
+        });
+        t3L.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                siki.setProgress(siki.getProgress()+25);
+                t3R.setEnabled(false);
+                t3L.setEnabled(false);
+            }
+        });
 
     }
 }
