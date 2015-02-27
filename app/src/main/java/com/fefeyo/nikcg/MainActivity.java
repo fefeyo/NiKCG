@@ -3,6 +3,7 @@ package com.fefeyo.nikcg;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,6 +25,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar ac = getSupportActionBar();
+        ac.setDisplayShowTitleEnabled(false);
+        ac.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        ac.setCustomView(R.layout.bar);
         list = (ListView) findViewById(R.id.battleList);
         arr = new ArrayList<>();
         item = new BattleListItem();
