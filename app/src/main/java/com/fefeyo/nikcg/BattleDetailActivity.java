@@ -3,6 +3,7 @@ package com.fefeyo.nikcg;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -33,6 +34,7 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
     }
 
