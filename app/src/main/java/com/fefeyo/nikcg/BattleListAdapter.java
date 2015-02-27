@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.fefeyo.nikcg.data.BattleListItem;
@@ -38,7 +39,14 @@ public class BattleListAdapter extends ArrayAdapter<BattleListItem> {
         rightName.setText(item.getRightName());
         TextView leftName = (TextView)convertView.findViewById(R.id.leftName);
         leftName.setText(item.getLeftName());
-
+        TextView title = (TextView)convertView.findViewById(R.id.title);
+        title.setText(item.getTitle());
+        ProgressBar p = (ProgressBar)convertView.findViewById(R.id.titleProgress);
+        if(position != 0) {
+            p.setProgress(position * 20);
+        }else{
+            p.setProgress(50);
+        }
         return convertView;
     }
 }

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
  * Created by FEFE on 2015/02/26.
  */
 public class BattleListItem {
+    private String title;
     private Bitmap rightGavament;
     private String rightName;
     private Bitmap leftGavament;
@@ -44,5 +45,11 @@ public class BattleListItem {
 
     public void setLeftName(String name){
         this.leftName = name;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public void setTitle(String title){
+        this.title = title;
     }
 }

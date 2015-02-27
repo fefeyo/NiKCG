@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.fefeyo.nikcg.data.BattleListItem;
@@ -19,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
     private BattleListAdapter adapter;
     private ArrayList<BattleListItem> arr;
     private BattleListItem item;
+    private ImageButton profile;
 
 
     @Override
@@ -33,12 +35,14 @@ public class MainActivity extends ActionBarActivity {
         arr = new ArrayList<>();
 
         //　テスト用開始
+        String[] title = new String[]{"政治とカネ","農協・安保","経済再生","衆議院解散総選挙"};
         String[] a = new String[]{"【自民】\n阿部首相","【自民】\n稲田朋美","【自民】\n谷垣禎一","【自民】\n稲田朋美"};
         String[] b = new String[]{"【民主】\n野党","【共産】\n小池晃","【民主】\n枝野幸男","【維新】\n柿崎未途"};
         int[] c = new int[]{R.drawable.abe,R.drawable.inada,R.drawable.tani,R.drawable.inada2};
         int[] d = new int[]{R.drawable.yato,R.drawable.koike,R.drawable.edano,R.drawable.kakizaki};
         for(int i = 0;i < a.length;i++){
             item = new BattleListItem();
+            item.setTitle(title[i]);
             item.setRightGavament(BitmapFactory.decodeResource(getResources(),c[i]));
             item.setRightName(a[i]);
             item.setLeftGavament(BitmapFactory.decodeResource(getResources(),d[i]));
@@ -56,6 +60,14 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i =  new Intent(MainActivity.this,BattleDetailActivity.class);
+                startActivity(i);
+            }
+        });
+        profile = (ImageButton)findViewById(R.id.profileButton);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,Profile.class);
                 startActivity(i);
             }
         });
