@@ -1,69 +1,39 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent"
-    android:id="@+id/Linear"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="99dp"
-        android:id="@+id/Linear1">
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/sword"
-            android:id="@+id/leftFace" />
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="3">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:id="@+id/leftDamage"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:id="@+id/rightDamage" />
-            </LinearLayout>
-
-            <ProgressBar
-                android:id="@+id/ProBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:progressDrawable="@drawable/progresspic" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/sword"
-            android:id="@+id/rightFace" />
-    </LinearLayout>
-
-    <ListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
+    <include
+        layout="@layout/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <include
+        layout="@layout/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp" />
+    <include
+        layout="@layout/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp" />
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:id="@+id/listView" />
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:text="この討論について\nもっと詳しく知りたい方はこちら"
+        app:bb_icon_left="fa-info-circle"
+        app:bb_icon_right="fa-info"
+        app:bb_roundedCorners="true"
+        app:bb_type="info" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"/>
 </LinearLayout>
+</ScrollView>

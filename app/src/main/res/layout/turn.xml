@@ -41,21 +41,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/rightApprove"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:text="右に賛成！"
-            android:id="@+id/rightApprove"
             app:bb_icon_left="fa-child"
             app:bb_roundedCorners="true"
             app:bb_type="success" />
         <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/leftApprove"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
-            android:id="@+id/leftApprove"
             android:text="左に賛成！"
             app:bb_icon_left="fa-child"
             app:bb_roundedCorners="true"
