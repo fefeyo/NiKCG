@@ -46,6 +46,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:text="右に賛成！"
+            app:bb_icon_left="fa-child"
             app:bb_roundedCorners="true"
             app:bb_type="success" />
         <com.beardedhen.androidbootstrap.BootstrapButton
@@ -54,6 +55,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:text="左に賛成！"
+            app:bb_icon_left="fa-child"
             app:bb_roundedCorners="true"
             app:bb_type="warning" />
         </LinearLayout>

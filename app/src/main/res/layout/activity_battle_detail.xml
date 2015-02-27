@@ -1,39 +1,38 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent"
-    android:id="@+id/Linear"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="99dp"
-        android:id="@+id/Linear1">
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/leftFace" />
-
-        <ProgressBar
-            android:id="@+id/ProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:progressDrawable="@drawable/progresspic" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/rightFace" />
-    </LinearLayout>
-
-    <ListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
+    <include
+        layout="@layout/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <include
+        layout="@layout/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+    <include
+        layout="@layout/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:id="@+id/listView" />
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="この討論について\nもっと詳しく知りたい方はこちら"
+        app:bb_icon_left="fa-info-circle"
+        app:bb_roundedCorners="true"
+        app:bb_type="info" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"/>
 </LinearLayout>
+</ScrollView>
