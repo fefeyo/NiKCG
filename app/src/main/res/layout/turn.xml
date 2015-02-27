@@ -55,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
+            android:id="@+id/leftApprove"
             android:text="左に賛成！"
             app:bb_roundedCorners="true"
             app:bb_type="warning" />

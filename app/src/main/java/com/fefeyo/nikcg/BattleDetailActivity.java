@@ -2,7 +2,6 @@ package com.fefeyo.nikcg;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-<<<<<<< HEAD
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -30,17 +29,11 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
    private int position;
     private final int MAX = 100;
     private int progress;
-=======
-
-
-public class BattleDetailActivity extends ActionBarActivity {
->>>>>>> 9e85fa1be926f2a7149f79050dae2dd05514af3a
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
-<<<<<<< HEAD
 
        leftFace = (ImageView)findViewById(R.id.leftFace);
        rightFace = (ImageView)findViewById(R.id.rightFace);
@@ -102,7 +95,5 @@ public class BattleDetailActivity extends ActionBarActivity {
                 battleBar.setProgress(progress);
                 break;
         }
-=======
->>>>>>> 9e85fa1be926f2a7149f79050dae2dd05514af3a
     }
 }
