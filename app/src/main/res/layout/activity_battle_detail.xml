@@ -17,16 +17,16 @@
         layout="@layout/turn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="70dp" />
     <include
         layout="@layout/turn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="70dp" />
     <com.beardedhen.androidbootstrap.BootstrapButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="50dp"
         android:text="この討論について\nもっと詳しく知りたい方はこちら"
         app:bb_icon_left="fa-info-circle"
         app:bb_roundedCorners="true"
