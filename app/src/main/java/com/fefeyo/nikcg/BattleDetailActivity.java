@@ -2,8 +2,8 @@ package com.fefeyo.nikcg;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -30,7 +30,10 @@ public class BattleDetailActivity extends ActionBarActivity implements AdapterVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle_detail);
 
-        requestWindowFeature(Window.FEATURE_PROGRESS);
+      battleBar = (ProgressBar)findViewById(R.id.Progress);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
 
 
     }
