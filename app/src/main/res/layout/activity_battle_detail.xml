@@ -29,7 +29,6 @@
         android:layout_margin="50dp"
         android:text="この討論について\nもっと詳しく知りたい方はこちら"
         app:bb_icon_left="fa-info-circle"
-        app:bb_icon_right="fa-info"
         app:bb_roundedCorners="true"
         app:bb_type="info" />
     <View
